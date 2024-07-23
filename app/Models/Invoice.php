@@ -9,12 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Invoice extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'user_id',
-        'total',
-        'order_id',
-        'customer_id',
-    ];
+    protected $guarded = ['id'];
 
     protected $with = [
         'order',

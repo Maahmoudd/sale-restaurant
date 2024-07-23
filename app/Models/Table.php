@@ -10,9 +10,7 @@ class Table extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'capacity',
-    ];
+    protected $guarded = ['id'];
 
     public function reservations(): HasMany
     {

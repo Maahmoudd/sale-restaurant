@@ -12,15 +12,7 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'table_id',
-        'reservation_id',
-        'customer_id',
-        'user_id',
-        'total',
-        'paid',
-        'date'
-    ];
+    protected $guarded = ['id'];
 
     public function table(): BelongsTo
     {

@@ -11,12 +11,7 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'table_id',
-        'customer_id',
-        'from_time',
-        'to_time'
-    ];
+    protected $guarded = ['id'];
 
     public function table(): BelongsTo
     {

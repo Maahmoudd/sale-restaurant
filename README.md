@@ -189,7 +189,7 @@ Authentication With Sanctum
 
 To facilitate testing and integration, provide a Postman collection that includes sample requests for each API endpoint, along with expected responses. This will help users understand how to interact with your API.
 
-[Link to Postman Collection](https://www.postman.com/navigation-engineer-30611453/workspace/salerest/overview) - Update this link once you create the collection.
+[Link to Postman Collection](https://documenter.getpostman.com/view/36493973/2sA3kXCzbA) - Update this link once you create the collection.
 
 
 - BaseUrl: your app link
@@ -220,6 +220,7 @@ composer dumpautoload
 run  ./vendor/bin/sail up -d to setup environment by docker
 ```
 ./vendor/bin/sail up -d
+./vendor/bin/sail artisan key:generate
 ```
 
 ## Run Migrations

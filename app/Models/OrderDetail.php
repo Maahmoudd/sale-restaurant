@@ -10,12 +10,7 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'order_id',
-        'meal_id',
-        'amount_to_pay',
-        'quantity'
-    ];
+    protected $guarded = ['id'];
 
     protected $with = [
         'meal'

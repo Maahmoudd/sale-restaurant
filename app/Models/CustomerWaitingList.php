@@ -4,16 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CustomerWaitingList extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'customer_id',
-        'table_id',
-        'to_time',
-        'from_time',
-    ];
+    protected $guarded = ['id'];
+
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function table(): BelongsTo
+    {
+        return $this->belongsTo(Table::class);
+    }
 
 }
