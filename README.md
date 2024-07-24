@@ -9,7 +9,7 @@
     - [2. Reserve Table](#2-reserve-table)
     - [3. List Menu Items](#3-list-menu-items)
     - [4. Place Order](#4-place-order)
-    - [5. Pay](#5-pay)
+    - [5. Checkout](#5-checkout)
 - [Design Patterns](#design-patterns)
 - [Bonus Features](#bonus-features)
 - [Docker](#docker)
