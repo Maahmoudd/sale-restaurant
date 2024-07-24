@@ -10,6 +10,6 @@ class OrderPaidException extends Exception
 {
     public function render(Request $request): Response
     {
-        return response(['message' => 'Order already paid'], Response::HTTP_BAD_REQUEST);
+        return response(['message' => 'Order already paid'], Response::HTTP_CONFLICT);
     }
 }

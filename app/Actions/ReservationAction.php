@@ -35,14 +35,14 @@ class ReservationAction implements IReservationAction
                 return [
                     'message' => 'No Room on this table',
                     'data' => [ReservationResource::make($existingWaitingList)],
-                    'code' => Response::HTTP_INTERNAL_SERVER_ERROR
+                    'code' => Response::HTTP_UNPROCESSABLE_ENTITY
                 ];
             }
             $waitingList = $this->waitingListRepository->create($request);
             return [
                 'message' => 'Table already reserved at this time and you are added to the waiting list',
                 'data' => [ReservationResource::make($waitingList)],
-                'code' => Response::HTTP_INTERNAL_SERVER_ERROR
+                'code' => Response::HTTP_CREATED
             ];
         }
         DB::beginTransaction();
